@@ -90,34 +90,7 @@
 		}
 
 			
-		for(var i=0;i<5;i++){
-			var ship = {};
-			ship.images = shipImages;
-
-			ship.x = (Math.random()*1000000)%WIDTH;
-			ship.y = 0;
-			ship.width = 80;
-			ship.height = 80;
-			ship.speedX = 1 + Math.random()*3;
-			ship.speedY = 0.7;
-
-			ship.move = function(){
-				if( this.x >= WIDTH && this.speedX >0 ){
-					// now move in left
-					this.speedX = - this.speedX;
-				}
-				if( this.x <=0 && this.speedX < 0 ){
-					// now move in right
-					this.speedX = - this.speedX;
-				}
-				this.x += this.speedX;
-				this.y += this.speedY;
-
-				// Reappear
-				if(this.y>=600) {
-					this.y = -50;
-				} 
-			}
+		
 
 			ship.fireBullet = function(){
 				if(Math.random()<0.01)
